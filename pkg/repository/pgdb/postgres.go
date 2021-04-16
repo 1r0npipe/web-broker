@@ -1,8 +1,11 @@
-package repository
+package storage
 
-import "github.com/1r0npipe/web-broker/pkg/model"
+import (
+	"github.com/1r0npipe/web-broker/pkg/model"
+	"github.com/1r0npipe/web-broker/pkg/repository"
+)
 
-type PgRepo Storage
+type PgRepo repository.Storage
 
 // func NewPgRepo() *PgRepo {
 // 	return &PgRepo{}

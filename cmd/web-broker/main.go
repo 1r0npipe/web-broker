@@ -20,12 +20,15 @@ func main() {
 	log.Print("Starting the app")
 
 	port := flag.String("port", "8000", "Port")
-	//storageName := flag.String("storage", "storage.json", "data storage")
+	storageName := flag.String("storageType", "file", "data storage")
 	shutdownTimeout := flag.Int64("shutdown_timeout", 3, "shutdown timeout")
 
 	//repo := repository.NewFileRepo(*storageName)
 
-	repo, _ := repository.New(nil)
+	repo, err := repository.New(*storageName)
+	if err != nil {
+		log.Fatal(err)
+	}
 	svc := service.New(repo)
 
 	serv := http.Server{

@@ -2,9 +2,10 @@ package repository
 
 import (
 	"github.com/1r0npipe/web-broker/pkg/model"
+	"github.com/1r0npipe/web-broker/pkg/repository"
 )
 
-type FileRepo Storage
+type FileRepo repository.Storage
 
 // func NewFileRepo(fileName string) *FileRepo {
 // 	return &FileRepo{fileName: fileName}

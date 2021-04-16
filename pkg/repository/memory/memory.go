@@ -1,8 +1,11 @@
 package repository
 
-import "github.com/1r0npipe/web-broker/pkg/model"
+import (
+	"github.com/1r0npipe/web-broker/pkg/model"
+	"github.com/1r0npipe/web-broker/pkg/repository"
+)
 
-type MemRepo Storage
+type MemRepo repository.Storage
 
 // func NewMemRepo() *MemRepo {
 // 	return &MemRepo{}
